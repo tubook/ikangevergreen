@@ -19,14 +19,21 @@
 <style lang="scss">
 .graphic {
   text-align: left;
-  @include mq($large) {
-    display: flex;
+  display: flex;
+  @include mq($small) {
+    flex-direction: column;
   }
-  .graphic__picture {
+  &__picture {
     img {
       @include mq($small) {
         width: 100%;
       }
+    }
+  }
+  dd {
+    flex: 1;
+    @include mq($small) {
+      padding-left: 0;
     }
   }
 }
