@@ -1,0 +1,339 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+dl,
+dd,
+ul,
+ol {
+  margin: 0;
+}
+
+hr {
+  border: none;
+}
+
+ul,
+ol {
+  padding-left: 0;
+  list-style: none;
+}
+
+a,
+button,
+input,
+optgroup,
+select,
+textarea {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+a {
+  text-decoration: none;
+
+  &:focus,
+  &:active {
+    text-decoration: none;
+  }
+}
+
+img {
+  border: none;
+}
+
+.n {
+  font-weight: normal;
+}
+
+.b {
+  font-weight: bold;
+}
+
+.f0 {
+  font-size: 0;
+}
+
+.f10 {
+  font-size: 12px;
+  transform: scale(0.8);
+  transform-origin: left center;
+}
+
+// 字体类名
+@for $i from 12 through 24 {
+  @if $i < 16 {
+    .f#{$i} {
+      font-size: #{$i}px;
+    }
+  } @else if $i % 2==0 {
+    .f#{$i} {
+      font-size: #{$i}px;
+    }
+  }
+}
+
+// 颜色类名
+@each $name,
+  $f
+    in (
+      g0: #000000,
+      g3: #333333,
+      g4: #444444,
+      g5: #555555,
+      g6: #666666,
+      g80: #808080,
+      g7: #777777,
+      g8: #888888,
+      g9: #999999,
+      ga: #aaaaaa,
+      gc: #cccccc,
+      ge3: #e3e3e3,
+      while: #ffffff,
+      text-success: #3f94fc,
+      text-primary: #222931,
+      text-regular: #424754,
+      // 默认颜色
+        text-secondary:
+        #777e8c,
+      // 次要颜色
+        text-warning:
+        #fb6041
+    )
+{
+  .#{$name} {
+    color: $f;
+  }
+}
+
+.tc {
+  text-align: center;
+}
+
+.tl {
+  text-align: left;
+}
+
+.tr {
+  text-align: right;
+}
+
+.dn {
+  display: none;
+}
+
+.dt {
+  display: table;
+}
+
+.db {
+  display: block;
+}
+
+.dib {
+  display: inline-block;
+}
+
+.df {
+  display: flex;
+}
+
+.vt {
+  vertical-align: top;
+}
+
+.vm {
+  vertical-align: middle;
+}
+
+.vb {
+  vertical-align: bottom;
+}
+
+.rel {
+  position: relative;
+}
+
+.abs {
+  position: absolute;
+}
+
+.fixed {
+  position: fixed;
+}
+
+// 间隔类名
+@each $name,
+  $prop
+    in (
+      p: padding,
+      pt: padding-top,
+      pr: padding-right,
+      pb: padding-bottom,
+      pl: padding-left
+    )
+{
+  @for $i from 5 through 30 {
+    @if $i % 5==0 {
+      .#{$name}#{$i} {
+        #{$prop}: #{$i}px;
+      }
+    } @else if $i==16 {
+      .#{$name}#{$i} {
+        #{$prop}: #{$i}px;
+      }
+    }
+  }
+}
+
+@each $name,
+  $prop
+    in (
+      m: margin,
+      mt: margin-top,
+      mr: margin-right,
+      mb: margin-bottom,
+      ml: margin-left
+    )
+{
+  @for $i from 5 through 30 {
+    @if $i % 5==0 {
+      .#{$name}#{$i} {
+        #{$prop}: #{$i}px;
+      }
+    } @else if $i==16 {
+      .#{$name}#{$i} {
+        #{$prop}: #{$i}px;
+      }
+    }
+  }
+}
+
+.pct100 {
+  width: 100%;
+}
+
+.pct50 {
+  width: 50%;
+}
+
+.h100 {
+  height: 100%;
+}
+
+.photo100 img {
+  width: 100%;
+}
+
+.photo-fit img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.lh0 {
+  line-height: 0;
+}
+
+.auto {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.bgwh {
+  background-color: #ffffff;
+}
+
+.bgee {
+  background-color: #eeeeee;
+}
+
+.parent-middle {
+  &:after {
+    display: inline-block;
+    width: 0;
+    height: 100%;
+    content: "";
+    vertical-align: middle;
+  }
+}
+
+.ell {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ovh {
+  overflow: hidden;
+}
+
+.ovv {
+  overflow: visible;
+}
+
+.vh {
+  visibility: hidden;
+}
+
+.l {
+  float: left;
+}
+
+.r {
+  float: right;
+}
+
+.clearfix:after {
+  display: block;
+  visibility: hidden;
+  clear: both;
+  height: 0;
+  content: "";
+}
+
+body {
+  min-width: 320px;
+  color: #424754;
+  word-break: break-all;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", STHeiti,
+    "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ui-cell {
+  display: flex;
+}
+
+.aib {
+  align-items: baseline;
+}
+
+.aic {
+  align-items: center;
+}
+
+.jcc {
+  justify-content: center;
+}
+
+.ui-cell__bd {
+  flex: 1;
+}
+
+.fww {
+  flex-wrap: wrap;
+}
+
+.usn {
+  user-select: none;
+}
+
+.cp {
+  cursor: pointer;
+}
