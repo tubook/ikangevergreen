@@ -1,5 +1,7 @@
 <template>
   <div>
+    <el-button>按钮</el-button>
+    <el-DatePicker></el-DatePicker>
     <div class="p20">
       <h3 class="">爱康君安 保驾幸福 守护健康</h3>
       <p>IKANG EVERGREEN HAPPINESS PROTECT HEALTH</p>

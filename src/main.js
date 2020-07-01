@@ -4,6 +4,7 @@ import router from "./router";
 import store from "./store";
 import i18n from "./utils/i18n";
 import "./styles/common.scss";
+import "./utils/element";
 import { getDeviceType } from "./utils";
 
 Vue.prototype.$deviceType = global.deviceType = getDeviceType();
