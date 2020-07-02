@@ -6,36 +6,20 @@
     </div>
     <router-view />
     <Menu />
+    <Footer />
   </div>
 </template>
 <script>
 import Menu from "./components/mobile/menu/menu";
+import Footer from "@components/common/footer.vue";
 export default {
   name: "App",
-  components: { Menu }
+  components: { Menu, Footer }
 };
 </script>
 <style lang="scss">
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
   width: 100vm;
   height: 100vh;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
 }
 </style>
