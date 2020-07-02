@@ -9,7 +9,7 @@
   </div>
 </template>
 <script>
-import Menu from "./components/mobile/menu/Menu";
+import Menu from "./components/mobile/menu/menu";
 export default {
   name: "App",
   components: { Menu }
