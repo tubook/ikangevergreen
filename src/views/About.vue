@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import HelloI18n from "../components/HelloI18n";
+import HelloI18n from "@components/common/HelloI18n.vue";
 export default {
   name: "About",
   components: { HelloI18n },
