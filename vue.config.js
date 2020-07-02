@@ -22,9 +22,10 @@ module.exports = {
       .set("@api", resolve("src/api"))
       .set("@components", resolve("src/components"))
       .set("@config", resolve("src/config"))
+      .set("@http", resolve("src/http"))
       .set("@store", resolve("src/store"))
       .set("@utils", resolve("src/utils"))
-      .set("@http", resolve("src/http"));
+      .set("@views", resolve("src/views"));
 
     config.optimization.minimize(true); // 最小化压缩
     config.optimization.splitChunks({

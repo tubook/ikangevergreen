@@ -1,0 +1,19 @@
+{
+  "include": ["./src/**/*"],
+  "exclude": ["node_modules"],
+  "compilerOptions": {
+    "baseUrl": "./src/",
+    "paths": {
+      "@api": ["api"],
+      "@assets": ["assets"],
+      "@components": ["components"],
+      "@config": ["config"],
+      "@http": ["http"],
+      "@routes": ["routes"],
+      "@store": ["store"],
+      "@styles": ["styles"],
+      "@utils": ["utils"],
+      "@views": ["views"]
+    }
+  }
+}

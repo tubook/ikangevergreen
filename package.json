@@ -9,6 +9,7 @@
     "i18n:report": "vue-cli-service i18n:report --src './src/**/*.?(js|vue)' --locales './src/locales/**/*.json'"
   },
   "dependencies": {
+    "axios": "^0.19.2",
     "core-js": "^3.6.5",
     "current-device": "^0.10.1",
     "element-ui": "^2.13.2",
@@ -21,6 +22,7 @@
   },
   "devDependencies": {
     "@intlify/vue-i18n-loader": "^1.0.0",
+    "@types/axios": "^0.14.0",
     "@types/cssnano": "^4.0.0",
     "@types/swiper": "^5.4.0",
     "@vue/cli-plugin-babel": "~4.4.0",

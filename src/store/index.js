@@ -20,5 +20,5 @@ export default new Vuex.Store({
   plugins:
     process.env.NODE_ENV === "production"
       ? [createPersistedState(persistedStateOpt)]
-      : [createLogger(), createPersistedState()]
+      : [createLogger(), createPersistedState(persistedStateOpt)]
 });
