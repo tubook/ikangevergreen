@@ -10,7 +10,7 @@ const getters = {
 
 const mutations = {
   choose(state, value) {
-    const lang = value === "cn" ? "zh-cmn-Hans" : value;
+    let lang = value === "cn" ? "zh-cmn-Hans" : value;
     i18n.locale = value;
     state.type = value;
     document.documentElement.lang = lang;

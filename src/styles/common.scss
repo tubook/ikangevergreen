@@ -297,7 +297,7 @@ img {
 }
 
 body {
-  @include mq($large) {
+  @include mq($desktop) {
     min-width: 1200px;
   }
   min-width: 320px;
@@ -310,7 +310,7 @@ body {
 }
 
 .wrapper {
-  @include mq($large) {
+  @include mq($desktop) {
     width: 1200px;
     min-width: 1200px;
     margin-left: auto;

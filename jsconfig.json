@@ -5,15 +5,25 @@
     "baseUrl": "./src/",
     "paths": {
       "@api": ["api"],
+      "@api/*": ["api/*"],
       "@assets": ["assets"],
+      "@assets/*": ["assets/*"],
       "@components": ["components"],
+      "@components/*": ["components/*"],
       "@config": ["config"],
+      "@config/*": ["config/*"],
       "@http": ["http"],
-      "@routes": ["routes"],
+      "@http/*": ["http/*"],
+      "@router": ["router"],
+      "@router/*": ["router/*"],
       "@store": ["store"],
+      "@store/*": ["store/*"],
       "@styles": ["styles"],
+      "@styles/*": ["styles/*"],
       "@utils": ["utils"],
-      "@views": ["views"]
+      "@utils/*": ["utils/*"],
+      "@views": ["views"],
+      "@views/*": ["views/*"]
     }
   }
 }

@@ -32,3 +32,36 @@ export const getDeviceType = () => {
   }
   return type;
 };
+
+/**
+ * 获取 url query 字段里的值
+ * @param {string} key
+ */
+export const getUrlQuery = key => {
+  const rex = new RegExp("\\b" + key + "=(\\b\\w+)");
+  const result = location.search.match(rex);
+  const field = Array.isArray(result) ? result[1] : "";
+  return field;
+};
+
+export const setDefaultLang = ({ i18n, store }) => {
+  const defaultLang = getUrlQuery("lang") || "cn";
+  store.dispatch("choose", defaultLang);
+  i18n.locale = defaultLang;
+  document.documentElement.lang =
+    i18n.locale === "cn" ? "zh-cmn-Hans" : i18n.locale;
+};
+
+export const transformQuery = ({ query = {}, language }) => {
+  let queryString = "";
+  query = JSON.parse(JSON.stringify(query));
+  if (language === "cn") {
+    delete query.lang;
+  } else {
+    query.lang = language;
+  }
+  Object.keys(query).forEach((key, i) => {
+    queryString += `${i ? "&" : "?"}${key}=${query[key]}`;
+  });
+  return queryString;
+};

@@ -5,14 +5,13 @@ import store from "./store";
 import i18n from "./utils/i18n";
 import "./styles/common.scss";
 import "./utils/element-ui";
-import { getDeviceType } from "./utils";
+import { getDeviceType, setDefaultLang } from "./utils";
 
 Vue.prototype.$deviceType = global.deviceType = getDeviceType();
 
 Vue.config.productionTip = false;
-i18n.locale = store.getters.language;
-document.documentElement.lang =
-  i18n.locale === "cn" ? "zh-cmn-Hans" : i18n.locale;
+
+setDefaultLang({ i18n, store });
 
 new Vue({
   router,

@@ -1,25 +1,22 @@
 <template>
   <div id="app">
+    <Header />
     <div id="nav">
       <router-link to="/">Home</router-link>|
       <router-link to="/about">About</router-link>
     </div>
     <router-view />
-    <Menu />
+    <!-- <Menu /> -->
     <Footer />
   </div>
 </template>
 <script>
-import Menu from "./components/mobile/menu/menu";
+import Header from "@components/common/header.vue";
+// import Menu from "./components/mobile/menu/menu";
 import Footer from "@components/common/footer.vue";
 export default {
   name: "App",
-  components: { Menu, Footer }
+  components: { Header, Footer }
 };
 </script>
-<style lang="scss">
-#app {
-  width: 100vm;
-  height: 100vh;
-}
-</style>
+<style lang="scss"></style>

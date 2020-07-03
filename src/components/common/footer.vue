@@ -52,7 +52,7 @@ export default {
   background-color: #222222;
   padding-top: 16px;
   padding-bottom: 23px;
-  @include mq($large) {
+  @include mq($desktop) {
     color: #b2b6ba;
     padding-bottom: 45px;
     padding-top: 54px;
@@ -63,13 +63,13 @@ export default {
     background-color: #403b39;
     margin-right: 104px;
     margin-left: 122px;
-    @include mq($small) {
+    @include mq($mobile) {
       display: none;
     }
   }
   .branch {
     width: 608px;
-    @include mq($small) {
+    @include mq($mobile) {
       display: none;
     }
     &-info {
@@ -85,7 +85,7 @@ export default {
   .contact {
     display: flex;
     flex-direction: row-reverse;
-    @include mq($small) {
+    @include mq($mobile) {
       display: block;
       padding-left: 16px;
       padding-right: 16px;
@@ -93,7 +93,7 @@ export default {
     }
   }
   .copyright {
-    @include mq($small) {
+    @include mq($mobile) {
       display: none;
     }
     text-align: center;
@@ -116,7 +116,7 @@ export default {
       line-height: 20px;
       padding-left: 10px;
     }
-    @include mq($small) {
+    @include mq($mobile) {
       display: flex;
       dt {
         display: none;
@@ -140,7 +140,7 @@ export default {
 
   .consumer-hotline {
     margin-bottom: 12px;
-    @include mq($large) {
+    @include mq($desktop) {
       margin-left: 83px;
     }
     dt {
@@ -155,7 +155,7 @@ export default {
       color: #d7d7d7;
       font-size: 26px;
       font-weight: 400;
-      @include mq($small) {
+      @include mq($mobile) {
         color: #b58244;
         font-size: 20px;
       }

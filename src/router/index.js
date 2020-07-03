@@ -1,6 +1,8 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
+import store from "@store";
+import { transformQuery } from "@utils";
 
 Vue.use(VueRouter);
 
@@ -30,8 +32,16 @@ const router = new VueRouter({
   routes
 });
 
-// router.afterEach((to, from) => {
-//   console.log(to, from);
-// });
+router.beforeEach((to, from, next) => {
+  let newfullPath = "";
+  const { hash, path, query } = to;
+  const language = from.query.lang || "cn";
+  if (query.lang !== "en" && store.state.language.type === "en") {
+    const queryString = transformQuery({ query, language });
+    newfullPath = path + queryString + hash;
+    return next(newfullPath);
+  }
+  next();
+});
 
 export default router;

@@ -6,18 +6,18 @@
     </div>
     <h1>This is an about page</h1>
     <div class="chang-lang">
-      <button @click="$store.dispatch('choose', 'cn')">切换中文语言</button>
+      <!-- <button @click="$store.dispatch('choose', 'cn')">切换中文语言</button>
       <button @click="$store.dispatch('choose', 'en')">切换英文语言</button>
-      <HelloI18n></HelloI18n>
+      <HelloI18n></HelloI18n> -->
     </div>
   </div>
 </template>
 
 <script>
-import HelloI18n from "@components/common/HelloI18n.vue";
+// import HelloI18n from "@components/common/HelloI18n.vue";
 export default {
   name: "About",
-  components: { HelloI18n },
+  // components: { HelloI18n },
   methods: {}
 };
 </script>
@@ -26,11 +26,11 @@ export default {
   background: #000;
   padding-top: 10px;
   padding-bottom: 10px;
-  @include mq($large) {
+  @include mq($desktop) {
     background: red;
   }
 
-  @include mq($small) {
+  @include mq($mobile) {
     // width: 100%;
     background: #ffffff;
   }

@@ -20,19 +20,19 @@
 .graphic {
   text-align: left;
   display: flex;
-  @include mq($small) {
+  @include mq($mobile) {
     flex-direction: column;
   }
   &__picture {
     img {
-      @include mq($small) {
+      @include mq($mobile) {
         width: 100%;
       }
     }
   }
   dd {
     flex: 1;
-    @include mq($small) {
+    @include mq($mobile) {
       padding-left: 0;
     }
   }
